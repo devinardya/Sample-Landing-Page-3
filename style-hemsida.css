@@ -48,7 +48,8 @@ body{
     padding-bottom: 30px;
     line-height: 45px;
     z-index: 2;
-    position: static;
+    position: absolute;
+    top: 10%;
     color:#fff;
 }
 
@@ -94,7 +95,7 @@ body{
     background: url(images/camera1.jpg) no-repeat;
     background-size: cover;
     background-position: bottom;
-    box-shadow: 1px 1px 16px 6px #1C1C1C;
+    box-shadow: 1px 1px 36px 6px #1c1c1c;
 }
 
 .slider-circle{
@@ -127,11 +128,23 @@ body{
     display: inline-block;
     width:150px;
     padding: 10px;
-    background-color: #ff9500;
     border: none;
     border-radius: 20px;
     color: rgb(106,19,157);
     margin-right: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(to right, #fff 50%, #ff9500 50%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    z-index: 4;
+}
+
+button:hover{
+    background-position: left bottom;
+    cursor: pointer;
 }
 
 .line-button{
@@ -142,6 +155,14 @@ body{
     background-color: transparent;
     border: none;
     font-size: 13px;
+    position: absolute;
+    z-index: 4;
+    left: 200px;
+}
+
+.line-button:hover{
+    color: #ff9500;
+    cursor: pointer;
 }
 
 .material-icons.arrow{
@@ -163,7 +184,6 @@ header{
 }
 
 header h3{
-    padding-top: 50px;
     font-weight: 600;
     color: grey;
     font-size: 18px;
@@ -173,7 +193,7 @@ header h3{
 header h1{
     font-weight: 400;
     color:#000;
-    font-size: 50px;
+    font-size: 55px;
     margin-bottom: 30px;
 }
 
@@ -181,14 +201,14 @@ header p{
     font-weight: 400;
     color:#000;
     font-size: 16px;
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
     color: grey;
     line-height: 25px;
 }
 
 section{
-    width: 68%;
+    width: 100%;
     height: 600px;
     margin: 0 auto;
     display: flex;
@@ -235,7 +255,7 @@ section{
     background-position: center;
 }
 .product-box:nth-child(3) .product-image{
-    background: url(images/camera3.jpg) no-repeat;
+    background: url(images/camera5.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -265,6 +285,10 @@ section{
     font-size: 13px;
     text-align: left;
     font-weight: 600;
+    position: static;
 }
 
-
+.line-button.product:hover{
+    color: darkred;
+    cursor: pointer;
+}
